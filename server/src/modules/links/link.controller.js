@@ -39,11 +39,7 @@ export const editLink = async (req, res) => {
   let { title, url } = req.body;
   let userId = req.user.id;
 
-  let { existingLink } = await LinkService.editLink(
-    linkId,
-    { title, url },
-    userId,
-  );
+  let existingLink = await LinkService.editLink(linkId, { title, url }, userId);
 
   res.status(200).json({
     success: true,
@@ -60,5 +56,27 @@ export const deleteLink = async (req, res) => {
   res.status(200).json({
     success: true,
     message: "Link deleted successfully.",
+  });
+};
+
+export const incrementLinkClicks = async (req, res) => {
+  let linkId = req.params.id;
+  let updatedLink = await LinkService.incrementLinkClicks(linkId);
+
+  res.status(200).json({
+    success: true,
+    message: "Link clicks incremented successfully",
+    updatedLink,
+  });
+};
+
+export const getLinkAnalysis = async (req, res) => {
+  let userId = req.user.id;
+  console.log(userId);
+  let analysis = await LinkService.getLinkAnalysis(userId);
+  res.status(200).json({
+    success: true,
+    message: "Link analysis fetched successfully",
+    analysis,
   });
 };

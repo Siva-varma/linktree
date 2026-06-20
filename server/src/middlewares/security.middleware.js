@@ -7,7 +7,6 @@ import env from "../config/env.js";
 import logger from "../config/logger.js";
 
 export function securityMiddleware(app) {
-  
   // helmet to used for setting various HTTP headers for security
   app.use(helmet());
 
@@ -15,6 +14,7 @@ export function securityMiddleware(app) {
   app.use(
     cors({
       origin: env.CORS_ORIGIN.split(",").map((origin) => origin.trim()),
+      credentials: true,
     }),
   );
   // HPP to protect against HTTP Parameter Pollution attacks
