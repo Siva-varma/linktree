@@ -8,6 +8,10 @@ import linkRouter from "./modules/links/link.routes.js";
 
 const app = express();
 
+if (envs.NODE_ENV === "production") {
+  app.set("trust proxy", 1);
+}
+
 // if (envs.NODE_ENV === "development") {
 //   import morgan from "morgan";
 //   app.use(morgan("dev"));
