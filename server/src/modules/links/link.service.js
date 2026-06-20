@@ -39,3 +39,28 @@ export const getAllLinks = async (user) => {
 
     return links;
 }
+
+export const editLink = async (linkId, linkData, userId) => {
+
+    //check if link exists
+    const existingLink = await linkModel.findOne({ _id: linkId, user: userId });
+
+    if (!existingLink) {
+        throw new Error("Link not found");
+    }
+
+    //check if link already exists for the user
+    const duplicateLink = await linkModel.findOne({ url: linkData.url, user: userId });
+
+    if (duplicateLink) {
+        throw new Error("Link already exists for the user");
+    }
+
+    //update link
+    existingLink.title = linkData.title || existingLink.title;
+    existingLink.url = linkData.url || existingLink.url;
+
+    await existingLink.save();
+
+    return existingLink;
+}

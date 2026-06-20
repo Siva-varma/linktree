@@ -1,6 +1,5 @@
 import helmet from "helmet";
 import cors from "cors";
-import rateLimit from "express-rate-limit";
 import hpp from "hpp";
 import compression from "compression";
 import express from "express";
@@ -18,17 +17,6 @@ export function securityMiddleware(app) {
       origin: env.CORS_ORIGIN.split(",").map((origin) => origin.trim()),
     }),
   );
-
-  //making it to allow 100req/15min
-  app.use(
-    rateLimit({
-      windowMs: env.RATELIMIT_WINDOWMS,
-      limit: env.RATELIMIT,
-      legacyHeaders: true,
-      message: "too many requests. please try after sometime",
-    }),
-  );
-
   // HPP to protect against HTTP Parameter Pollution attacks
   app.use(hpp());
 
