@@ -20,6 +20,13 @@ export const getAllLinks = async (req, res) => {
 
   let links = await LinkService.getAllLinks(user);
 
+  if (links.length === 0) {
+    return res.status(200).json({
+      success: true,
+      message: "No links found for the user",
+    });
+  }
+
   res.status(200).json({
     success: true,
     message: "Links fetched successfully",
@@ -32,22 +39,26 @@ export const editLink = async (req, res) => {
   let { title, url } = req.body;
   let userId = req.user.id;
 
-  let { existingLink } = await LinkService.editLink(linkId, { title, url }, userId);
+  let { existingLink } = await LinkService.editLink(
+    linkId,
+    { title, url },
+    userId,
+  );
 
-    res.status(200).json({
-        success: true,
-        message: "Link updated successfully",
-        existingLink,
-    })
+  res.status(200).json({
+    success: true,
+    message: "Link updated successfully",
+    existingLink,
+  });
 };
 
 export const deleteLink = async (req, res) => {
-    let linkId = req.params.id;
-    let userId = req.user.id;
-    await LinkService.deleteLink(linkId, userId);
+  let linkId = req.params.id;
+  let userId = req.user.id;
+  await LinkService.deleteLink(linkId, userId);
 
-    res.status(200).json({
-        success: true,
-        message: "Link deleted successfully.",
-    });
-}
+  res.status(200).json({
+    success: true,
+    message: "Link deleted successfully.",
+  });
+};
