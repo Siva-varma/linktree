@@ -1,7 +1,9 @@
 import linkModel from "../../models/link.model.js";
+import userModel from "../../models/user.model.js";
 
 
-export const createLinkService = async (linkData) => {
+
+export const createLink = async (linkData) => {
 
     //check all required fields are present
     if (!linkData.title || !linkData.url || !linkData.userId) {
@@ -23,4 +25,17 @@ export const createLinkService = async (linkData) => {
     });
 
     return newLink;
+}
+
+export const getAllLinks = async (user) => {
+    
+    const userData = await userModel.findOne({ username: user });
+
+    if (!userData) {
+        throw new Error("User not found");
+    }
+
+    const links = await linkModel.find({ user: userData._id });
+
+    return links;
 }

@@ -1,11 +1,11 @@
-import { createLinkService } from "./link.service.js";
+import * as LinkService  from "./link.service.js";
 
 export const createLink = async (req, res) => {
   let { title, url } = req.body;
   let userId = req.user.id;
   let linkData = { title, url, userId };
 
-  let newLink  = await createLinkService(linkData);
+  let newLink  = await LinkService.createLink(linkData);
 
 
     res.status(201).json({
@@ -14,3 +14,16 @@ export const createLink = async (req, res) => {
         newLink
     })
 };
+
+export const getAllLinks = async (req, res) => {
+    let user = req.params.username;
+    console.log(user);
+
+    let links = await LinkService.getAllLinks(user);
+
+    res.status(200).json({
+        success: true,
+        message: "Links fetched successfully",
+        links
+    });
+}

@@ -7,4 +7,6 @@ const linkRouter = express.Router();
 
 linkRouter.post("/", authMiddleware, asyncHandler(linkController.createLink));
 
+linkRouter.get("/:username", asyncHandler(linkController.getAllLinks));
+
 export default linkRouter;
