@@ -40,3 +40,14 @@ export const editLink = async (req, res) => {
         existingLink,
     })
 };
+
+export const deleteLink = async (req, res) => {
+    let linkId = req.params.id;
+    let userId = req.user.id;
+    await LinkService.deleteLink(linkId, userId);
+
+    res.status(200).json({
+        success: true,
+        message: "Link deleted successfully.",
+    });
+}

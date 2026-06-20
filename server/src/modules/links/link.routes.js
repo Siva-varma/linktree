@@ -11,4 +11,6 @@ linkRouter.get("/:username", asyncHandler(linkController.getAllLinks));
 
 linkRouter.put("/:id", authMiddleware, asyncHandler(linkController.editLink));
 
+linkRouter.delete("/:id", authMiddleware, asyncHandler(linkController.deleteLink));
+
 export default linkRouter;

@@ -64,3 +64,18 @@ export const editLink = async (linkId, linkData, userId) => {
 
     return existingLink;
 }
+
+
+export const deleteLink = async (linkId, userId) => {
+    //check if link exists
+    const existingLink = await linkModel.findOne({ _id: linkId, user: userId });
+
+    if (!existingLink) {
+        throw new Error("Link not found");
+    }
+
+    //delete link
+    await existingLink.remove;
+
+    return existingLink;
+}
