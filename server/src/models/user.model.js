@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "Password is required"],
     select: false, //to exclude password from query results by default
   },
-});
+},{timestamps: true});
 
 //pre-save hook to hash the password before saving the user
 userSchema.pre("save", async function (next) {
