@@ -38,6 +38,7 @@ const HomePage = () => {
     };
   }, [analysis.totalClicks, analysis.totalLinks]);
 
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const customLink = useMemo(() => {
     if (!user?.username) {
       return "";
