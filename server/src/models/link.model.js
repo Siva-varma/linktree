@@ -16,6 +16,10 @@ const linkSchema = new mongoose.Schema({
             message: (props) => `${props.value} is not a valid URL!`,
         },
     },
+    noOfClicks: {
+        type: Number,
+        default: 0,
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
