@@ -6,12 +6,7 @@ export const registerUser = async (req, res) => {
   let { newUser, token } = await registerUserService(userData);
 
   //set token in cookie
-  res.cookie("token", token, {
-    httpOnly: true,
-    sameSite: "none",
-    secure: true,
-    maxAge: 24 * 60 * 60 * 1000, // 1 day
-  });
+  res.cookie("token", token);
 
   res.status(201).json({
     success: true,
@@ -33,12 +28,7 @@ export const loginUser = async (req, res) => {
   );
 
   //set token in cookie
-  res.cookie("token", token, {
-    httpOnly: true,
-    sameSite: "none",
-    secure: true,
-    maxAge: 24 * 60 * 60 * 1000, // 1 day
-  });
+  res.cookie("token", token);
 
   res.status(200).json({
     success: true,
