@@ -11,7 +11,7 @@ export const fetchAnalysis = createAsyncThunk(
   "links/fetchAnalysis",
   async (_, thunkAPI) => {
     try {
-      const response = await api.get("/api/links/analysis");
+      const response = await api.get("/links/analysis");
       return response.data.analysis;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -25,7 +25,7 @@ export const createLink = createAsyncThunk(
   "links/createLink",
   async (payload, thunkAPI) => {
     try {
-      await api.post("/api/links", payload);
+      await api.post("/links", payload);
       await thunkAPI.dispatch(fetchAnalysis());
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -39,7 +39,7 @@ export const updateLink = createAsyncThunk(
   "links/updateLink",
   async ({ id, payload }, thunkAPI) => {
     try {
-      await api.put(`/api/links/${id}`, payload);
+      await api.put(`/links/${id}`, payload);
       await thunkAPI.dispatch(fetchAnalysis());
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -53,7 +53,7 @@ export const removeLink = createAsyncThunk(
   "links/removeLink",
   async (id, thunkAPI) => {
     try {
-      await api.delete(`/api/links/${id}`);
+      await api.delete(`/links/${id}`);
       await thunkAPI.dispatch(fetchAnalysis());
     } catch (error) {
       return thunkAPI.rejectWithValue(

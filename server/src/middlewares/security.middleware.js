@@ -1,5 +1,4 @@
 import helmet from "helmet";
-import cors from "cors";
 import hpp from "hpp";
 import compression from "compression";
 import express from "express";
@@ -10,13 +9,6 @@ export function securityMiddleware(app) {
   // helmet to used for setting various HTTP headers for security
   app.use(helmet());
 
-  // CORS to allow cross-origin requests from specified origins
-  app.use(
-    cors({
-      origin: env.CORS_ORIGIN.split(",").map((origin) => origin.trim()),
-      credentials: true,
-    }),
-  );
   // HPP to protect against HTTP Parameter Pollution attacks
   app.use(hpp());
 

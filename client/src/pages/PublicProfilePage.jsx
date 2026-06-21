@@ -15,7 +15,7 @@ const PublicProfilePage = () => {
         setLoading(true);
         setError("");
 
-        const response = await api.get(`/api/links/${username}`);
+        const response = await api.get(`/links/${username}`);
         setLinks(response.data.links || []);
       } catch (err) {
         setError(err.response?.data?.message || "Failed to load links");
@@ -31,7 +31,7 @@ const PublicProfilePage = () => {
   const handleLinkClick = async (link) => {
     try {
       setClickedId(link._id);
-      await api.put(`/api/links/${link._id}/click`);
+      await api.put(`/links/${link._id}/click`);
     } catch {
       // Redirect should still happen even if click tracking fails.
     } finally {
