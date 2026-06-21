@@ -5,7 +5,7 @@ import envs from "./config/env.js";
 import authRouter from "./modules/auth/auth.route.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
 import linkRouter from "./modules/links/link.routes.js";
-import morgan from "morgan";
+
 
 const app = express();
 
@@ -13,9 +13,7 @@ if (envs.NODE_ENV === "production") {
   app.set("trust proxy", 1);
 }
 
-if (envs.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
+
 
 securityMiddleware(app);
 
