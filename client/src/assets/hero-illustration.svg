@@ -4,11 +4,7 @@
   <!-- Center hub circle -->
   <circle cx="280" cy="210" r="60" fill="#0F172A" opacity="0.1" stroke="#0F172A" stroke-width="2"/>
   <circle cx="280" cy="210" r="50" fill="white" stroke="#0F172A" stroke-width="2.5"/>
-  
-  <!-- Hub icon/text inside -->
-  <circle cx="280" cy="200" r="8" fill="#0EA5E9"/>
-  <circle cx="270" cy="215" r="6" fill="#10B981"/>
-  <circle cx="290" cy="215" r="6" fill="#06B6D4"/>
+
   
   <!-- Top link destination -->
   <rect x="235" y="40" width="90" height="50" rx="12" fill="#0EA5E9" opacity="0.15" stroke="#0EA5E9" stroke-width="2"/>
@@ -35,8 +31,8 @@
   <text x="105" y="217" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Blog</text>
   
   <!-- Top-left link -->
-  <rect x="60" y="70" width="90" height="50" rx="12" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="2"/>
-  <text x="105" y="102" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Website</text>
+  <rect x="30" y="90" width="90" height="50" rx="12" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="2"/>
+  <text x="75" y="115" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Website</text>
   
   <!-- Connection lines from center to each link -->
   <line x1="280" y1="260" x2="280" y2="330" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
@@ -45,13 +41,12 @@
   <line x1="230" y1="210" x2="150" y2="210" stroke="#10B981" stroke-width="2" opacity="0.6"/>
   
   <!-- Diagonal connections -->
-  <line x1="308" y1="243" x2="380" y2="300" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
-  <line x1="252" y1="243" x2="60" y2="300" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
-  <line x1="308" y1="177" x2="380" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
-  <line x1="252" y1="177" x2="60" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="316" y1="243" x2="380" y2="300" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="318" y1="177" x2="380" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="245" y1="177" x2="120" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
   
   <!-- Center hub label -->
-  <text x="280" y="225" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="500" fill="#64748B" text-anchor="middle">LinkHub</text>
+  <text x="50%" y="51%" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0398fb" text-anchor="middle">LinkHub</text>
   
   <!-- Plus icons on connections to indicate "add link" concept -->
   <circle cx="280" cy="130" r="6" fill="white" stroke="#0EA5E9" stroke-width="1.5"/>
