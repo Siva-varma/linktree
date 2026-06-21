@@ -1,15 +1,16 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import PublicProfilePage from "../pages/PublicProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
+import Landing from "../pages/Landing";
 
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/home" replace />} />
+      <Route path="/" element={<Landing />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/:username" element={<PublicProfilePage />} />

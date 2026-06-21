@@ -1,0 +1,60 @@
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="none"/>
+  
+  <!-- Center hub circle -->
+  <circle cx="280" cy="210" r="60" fill="#0F172A" opacity="0.1" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="280" cy="210" r="50" fill="white" stroke="#0F172A" stroke-width="2.5"/>
+  
+  <!-- Hub icon/text inside -->
+  <circle cx="280" cy="200" r="8" fill="#0EA5E9"/>
+  <circle cx="270" cy="215" r="6" fill="#10B981"/>
+  <circle cx="290" cy="215" r="6" fill="#06B6D4"/>
+  
+  <!-- Top link destination -->
+  <rect x="235" y="40" width="90" height="50" rx="12" fill="#0EA5E9" opacity="0.15" stroke="#0EA5E9" stroke-width="2"/>
+  <text x="280" y="72" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Portfolio</text>
+  
+  <!-- Top-right link -->
+  <rect x="380" y="70" width="90" height="50" rx="12" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="2"/>
+  <text x="425" y="102" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">YouTube</text>
+  
+  <!-- Right link -->
+  <rect x="410" y="185" width="90" height="50" rx="12" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <text x="455" y="217" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Twitter</text>
+  
+  <!-- Bottom-right link -->
+  <rect x="380" y="300" width="90" height="50" rx="12" fill="#0EA5E9" opacity="0.15" stroke="#0EA5E9" stroke-width="2"/>
+  <text x="425" y="332" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">LinkedIn</text>
+  
+  <!-- Bottom link -->
+  <rect x="235" y="330" width="90" height="50" rx="12" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="2"/>
+  <text x="280" y="362" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">GitHub</text>
+  
+  <!-- Left link -->
+  <rect x="60" y="185" width="90" height="50" rx="12" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <text x="105" y="217" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Blog</text>
+  
+  <!-- Top-left link -->
+  <rect x="60" y="70" width="90" height="50" rx="12" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="2"/>
+  <text x="105" y="102" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0F172A" text-anchor="middle">Website</text>
+  
+  <!-- Connection lines from center to each link -->
+  <line x1="280" y1="260" x2="280" y2="330" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+  <line x1="280" y1="160" x2="280" y2="90" stroke="#0EA5E9" stroke-width="2" opacity="0.6"/>
+  <line x1="330" y1="210" x2="410" y2="210" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+  <line x1="230" y1="210" x2="150" y2="210" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Diagonal connections -->
+  <line x1="308" y1="243" x2="380" y2="300" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="252" y1="243" x2="60" y2="300" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="308" y1="177" x2="380" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  <line x1="252" y1="177" x2="60" y2="120" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Center hub label -->
+  <text x="280" y="225" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="500" fill="#64748B" text-anchor="middle">LinkHub</text>
+  
+  <!-- Plus icons on connections to indicate "add link" concept -->
+  <circle cx="280" cy="130" r="6" fill="white" stroke="#0EA5E9" stroke-width="1.5"/>
+  <line x1="277" y1="130" x2="283" y2="130" stroke="#0EA5E9" stroke-width="1.5"/>
+  <line x1="280" y1="127" x2="280" y2="133" stroke="#0EA5E9" stroke-width="1.5"/>
+</svg>
