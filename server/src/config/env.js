@@ -6,7 +6,6 @@ const envSchema = z.object({
   PORT: z.coerce.number(),
   NODE_ENV: z.enum(["development", "production"]),
   MONGO_URI: z.string(),
-  CORS_ORIGIN: z.string(),
   JWT_EXPIRES_IN: z.string(),
   JWT_SECRET: z.string(),
 });
